@@ -1,0 +1,19 @@
+
+body{
+    margin: 0;
+    padding: 0;
+    background-color: rgb(244, 248, 252);
+}
+
+.loader-wrapper {
+    position: fixed; 
+    top: 0;
+    left: 0;
+    width: 100%; 
+    height: 100%; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; 
+    overflow: hidden; 
+}

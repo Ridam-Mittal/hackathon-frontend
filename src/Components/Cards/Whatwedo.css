@@ -1,0 +1,66 @@
+.objectives {
+  text-align: center;
+  padding: 50px 20px;
+}
+h2{
+  color:white;
+}
+.objectives-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 25px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.objective-card {
+  background-color: white;
+  border-radius: 10px;
+  padding: 35px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  margin-top: 2.5rem;
+  height: 10rem;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.objective-card img {
+  margin-bottom: 20px;
+  width: 6rem;
+  height: 6rem;
+  border-radius: 50px;
+  object-fit: cover;
+}
+
+.objective-card h3 {
+  color:black;
+  font-size: 1.2em;
+  margin-bottom: 10px;
+}
+
+.objectives p{
+  color:white;
+  font-family: 'Poppins', sans-serif; 
+}
+
+.objective-card p {
+  color: rgb(189, 187, 187);
+}
+
+@media screen and (max-width: 800px) {
+  .objectives-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .objective-card {
+    padding: 35px;
+    margin-top: 2.5rem;
+    height: 10rem;
+    width: 80%;
+  }
+}

@@ -1,0 +1,162 @@
+.Login-container {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  width: 600px;
+  /* margin-top: 200px; */
+  background: #000000;
+  padding-bottom: 30px;
+  /* margin-bottom: 30px; */
+  border-radius: 10px;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  gap: 9px;
+  margin-top: 18px;
+}
+
+.auth-text {
+  font-family: fahkwang;
+  font-weight:bold;
+  font-size: 56px;
+  color: white;
+  font-weight: 700px;
+}
+
+.inputs {
+  margin-top: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.k{
+  background-color: black;
+}
+
+.input , .input1{
+  display: flex;
+  align-items: center;
+  margin: auto;
+  width: 404px;
+  height: 59px;
+  background-color: #454343;
+  border-radius: 6px;
+}
+
+.input1{
+  background-color: #e6c7eb;
+}
+
+.input input {
+  background: transparent;
+  border: none;
+  outline: none;
+  height: 50px;
+  width: 400px;
+  font-size: 19px;
+  color: #ffffff;
+  padding: 1.2rem;
+}
+
+.forgot-password {
+  padding-left: 62px;
+  margin-top: 27px;
+  color: #ffffff;
+  font-size: 18px;
+}
+
+.forgot-password span {
+  color: #9b5eab;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.submit-container {
+  display: flex;
+  gap: 30px;
+  margin: 60px auto;
+}
+
+.submit {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 59px;
+  width: 229px;
+  color: #fff;
+  background-color: #9b5eab;
+  border-radius: 50px;
+  font-size: 19px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.forgot-password1 {
+  padding-left: 62px;
+  margin-top: 27px;
+  color: #ffffff;
+  font-size: 18px;
+}
+
+.forgot-password1 span {
+  color: #9b5eab;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.forgot-password1 a {
+  color: #9b5eab;
+  text-decoration: none;
+}
+
+@media (max-width: 768px) {
+  .Login-container {
+    width: 80%;
+    margin-top: 100px;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+  }
+
+  .auth-text {
+    font-size: 30px;
+  }
+
+  .input {
+    width: 80%;
+    height: 60px;
+  }
+
+  .input input {
+    width: 70%;
+    font-size: 16px;
+  }
+
+  .forgot-password {
+    margin-top: 20px;
+    font-size: 16px;
+  }
+
+  .forgot-password1 {
+    margin-top: 20px;
+    font-size: 16px;
+  }
+
+  .submit-container {
+    flex-direction: column;
+    gap: 15px;
+    margin: 30px auto;
+    width: 100%;
+  }
+
+  .submit {
+    width: 70%;
+    height: 50px;
+    font-size: 16px;
+    margin: auto;
+  }
+}

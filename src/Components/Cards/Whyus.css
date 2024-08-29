@@ -1,0 +1,145 @@
+.reforestation-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f1f6f1;
+  padding: 50px 20px;
+  margin: 4rem;
+}
+
+.content-container {
+  display: flex;
+  max-width: 1200px;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.text-content {
+  max-width: 500px;
+}
+
+.text-content h5 {
+  color: #008000;
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+.text-content h2 {
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.text-content p {
+  font-size: 18px;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.features-list {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 20px;
+}
+
+.features-list li {
+  font-size: 26px;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.features-list li::before {
+  content: "✔";
+  color: #008000;
+  margin-right: 10px;
+  padding: 0.5rem;
+}
+
+.why-us-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #008000;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 18px;
+}
+
+.image-content {
+  position: relative;
+}
+
+.background-image {
+  width: 500px;
+  border-radius: 10px;
+  height: 30rem;
+  object-fit: cover;
+}
+
+@media screen and (max-width: 1200px) {
+  .content-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .text-content,
+  .image-content {
+    max-width: 100%;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .background-image {
+    width: 100%;
+    max-width: 550px;
+    height: auto;
+  }
+
+  .text-content h2 {
+    font-size: 28px;
+  }
+
+  .text-content p {
+    font-size: 16px;
+  }
+
+  .features-list li {
+    font-size: 20px;
+  }
+
+  .why-us-btn {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .reforestation-section {
+    padding: 20px 10px;
+    margin: 2rem;
+  }
+
+  .text-content h2 {
+    font-size: 24px;
+  }
+
+  .text-content p {
+    font-size: 14px;
+  }
+
+  .background-image {
+    width: 100%;
+    max-width: 450px;
+    height: auto;
+  }
+
+  .features-list li {
+    font-size: 18px;
+  }
+
+  .why-us-btn {
+    font-size: 14px;
+  }
+}

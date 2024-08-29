@@ -1,0 +1,144 @@
+.signup-container {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  width: 600px;
+  margin-top: 200px;
+  background: #000000;
+  padding-bottom: 30px;
+  margin-bottom: 30px;
+  border-radius: 10px;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  gap: 9px;
+  margin-top: 18px;
+}
+
+.auth-text {
+  font-size: 48px;
+  color: #9b5eab;
+  font-weight: 700px;
+}
+
+.inputs {
+  margin-top: 55px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.input {
+  display: flex;
+  align-items: center;
+  margin: auto;
+  width: 480px;
+  height: 80px;
+  background-color: #000000;
+  border-radius: 6px;
+}
+
+.input input {
+  background: transparent;
+  border: none;
+  outline: none;
+  height: 50px;
+  width: 400px;
+  font-size: 19px;
+  color: #797979;
+  padding: 1.2rem;
+}
+
+.forgot-password {
+  padding-left: 62px;
+  margin-top: 27px;
+  color: #797979;
+  font-size: 18px;
+}
+
+.forgot-password span {
+  color: #9b5eab;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.submit-container {
+  display: flex;
+  gap: 30px;
+  margin: 60px auto;
+}
+
+.submit {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 59px;
+  width: 229px;
+  color: #000000;
+  background-color: #9b5eab;
+  border-radius: 50px;
+  font-size: 19px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.gray {
+  background: #eaeaea;
+  color: #676767;
+}
+
+span.k{
+  background-color: #9b5eab;
+  text-decoration: none;
+}
+
+span.k a{
+  text-decoration: none;
+  color:white;
+}
+
+@media (max-width: 768px) {
+  .signup-container {
+    width: 80%;
+    margin-top: 100px;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+  }
+
+  .auth-text {
+    font-size: 36px;
+  }
+
+  .input {
+    width: 100%;
+    height: 60px;
+  }
+
+  .input input {
+    width: 80%;
+    font-size: 16px;
+  }
+
+  .forgot-password {
+    padding-left: 10px;
+    margin-top: 20px;
+    font-size: 16px;
+  }
+
+  .submit-container {
+    flex-direction: column;
+    gap: 15px;
+    margin: 30px auto;
+    width: 100%;
+  }
+
+  .submit {
+    width: 100%;
+    height: 50px;
+    font-size: 16px;
+  }
+}

@@ -1,0 +1,165 @@
+
+  .abt-container {
+    /* padding: 2rem; */
+    max-width: 1800px;
+    margin: auto;
+  }
+  
+  .intro-section {
+    padding: 2rem;
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
+  .abt-title {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 0.5rem;
+  }
+  
+  .subtitle {
+    font-size: 1.25rem;
+    color: #838181;
+  }
+  
+  .grid-container {
+    padding: 6rem;
+    padding-top:0px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+  }
+  
+  .card {
+    flex: 1 1 calc(50% - 1.5rem);
+    background: #f9f9f9;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .card-title {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 1rem;
+  }
+  
+  .card-text {
+    font-size: 1rem;
+    color: #555;
+  }
+  
+  .info-section {
+    padding: 6rem;
+    padding-top: 0px;
+    margin: 2rem 0;
+  }
+  
+  .section-title {
+    font-size: 1.75rem;
+    color: #333;
+    margin-bottom: 1rem;
+  }
+  
+  .section-text {
+    font-size: 1.5rem;
+    color: #555;
+    margin-bottom: 1rem;
+  }
+  
+  .contact-section {
+    text-align: center;
+    margin-top: 2rem;
+  }
+  
+  .contact-section a {
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  .contact-section a:hover {
+    text-decoration: underline;
+  }
+  
+  .abt-images {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: auto;
+    padding: 2rem;
+    max-width: 80%;
+    flex-wrap: wrap; 
+  }
+  
+  .about-img {
+    border-radius: 10px;
+    max-width: 100%; 
+    margin-bottom: 1rem; 
+  }
+
+  .m{
+    margin:0px;
+    padding:0px;
+    width:100%;
+  }
+  
+  @media (max-width: 1171px) {
+    .abt-container {
+      padding: 1rem;
+    }
+  
+    .abt-title {
+      font-size: 2rem;
+    }
+  
+    .subtitle {
+      font-size: 1.1rem;
+    }
+  
+    .grid-container {
+      flex-direction: column; 
+    }
+  
+    .card {
+      flex: 1 1 100%;
+    }
+  
+    .abt-images {
+      flex-direction: column; 
+    }
+  
+    .section-title {
+      font-size: 1.5rem;
+    }
+  
+    .section-text {
+      font-size: 1.25rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .abt-title {
+      font-size: 1.75rem;
+    }
+  
+    .subtitle {
+      font-size: 1rem;
+    }
+  
+    .card-title {
+      font-size: 1.25rem;
+    }
+  
+    .card-text {
+      font-size: 0.9rem;
+    }
+  
+    .section-title {
+      font-size: 1.25rem;
+    }
+  
+    .section-text {
+      font-size: 1rem;
+    }
+  }
+  

@@ -1,0 +1,96 @@
+.showcasing-join {
+  margin-top: 6rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.having-que {
+  font-size: 2rem;
+  color: white;
+  margin-bottom: 2rem;
+}
+
+.join-content {
+  display: flex;
+  /* align-items: center; */
+  /* justify-content: center; */
+  padding: 1rem 2rem;
+  background-color: white;
+  color: #ffffff;
+  border-radius: 8px;
+  cursor: pointer;
+  width:600px;
+  transition: background-color 0.3s ease;
+}
+
+.faq-que{
+  color:black;
+}
+
+.join-content h2 {
+  margin: 0;
+  padding-right: 10px;
+  width:1000px;
+  color:black;
+  /* margin-right: 0.5rem; */
+  font-size: 1.5rem;
+}
+
+.join-content:hover {
+  background-color: #f0f0f0;
+}
+
+/* .join-content lord-icon {
+  width: 24px;
+  height: 24px;
+} */
+
+.accordion {
+  gap: 5rem !important;
+}
+
+.join-content h2 a{
+  text-decoration: underline;
+  color:black;
+}
+
+@media screen and (max-width: 1000px) {
+  .faq-que {
+    font-size: 1.2rem !important;
+  }
+}
+
+@media screen and (max-width: 736px) {
+  .faq-que {
+    font-size: 1.1rem !important;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .faq-heading h2 {
+    font-size: 2.3rem !important;
+  }
+}
+
+@media screen and (max-width: 690px) {
+  .faq-que {
+    font-size: 1rem !important;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .faq-heading h2 {
+    font-size: 2rem !important;
+  }
+  .faq-que {
+    font-size: 0.9rem !important;
+  }
+}
+
+@media screen and (max-width: 300px) {
+  .faq-heading h2 {
+    font-size: 1.8rem !important;
+  }
+}
