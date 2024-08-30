@@ -1,5 +1,5 @@
 import "./Login.css";
-import Footer from "../../footer.jsx";
+import Footer from "../../Footer.jsx";  
 const Login = () => {
   return (
     <div className="k">

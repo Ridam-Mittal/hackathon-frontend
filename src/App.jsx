@@ -13,10 +13,15 @@ function App() {
     setLoading(true);
     const timer = setTimeout(() => {
       setLoading(false);
-    },1000);
+    }, 1000);
 
     return () => clearTimeout(timer);
-  },[]);
+  }, []);
+
+  // Placeholder for adding routes
+  const handleRoutes = () => {
+    // Add your route handling logic here
+  };
 
   return (
     <>

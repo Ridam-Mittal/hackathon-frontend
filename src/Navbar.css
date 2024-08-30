@@ -95,7 +95,7 @@
     justify-content: space-between;
     padding: 0 20px;
     z-index: 1000;
-    border-bottom: 3px solid white;
+    /* border-bottom: 3px solid white; */
   }
   
   .title {

@@ -1,165 +1,182 @@
+.abt-container {
+  max-width: 1800px;
+  margin: auto;
+  padding: 2rem;
+}
 
-  .abt-container {
-    /* padding: 2rem; */
-    max-width: 1800px;
-    margin: auto;
-  }
-  
-  .intro-section {
-    padding: 2rem;
-    text-align: center;
-    margin-bottom: 2rem;
-  }
-  
+.k {
+  background-color: black;
+}
+
+.intro-section {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.abt-title {
+  font-family: 'Fahkwang', sans-serif;
+  font-weight: 700;
+  font-size: 56px;
+  color: #ffffff;
+}
+
+.subtitle {
+  font-family: 'Fahkwang', sans-serif;
+  color: #e6c7eb;
+  font-size: 1.2rem;
+}
+
+.mission-image-section,
+.values-image-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.mission-card,
+.values-card {
+  background-color: black;
+  color:#e6c7eb;
+  flex: 1;
+  padding: 1rem;
+  border-radius: 30px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.mission-image,
+.values-image {
+  flex: 1;
+  padding: 1rem;
+}
+
+.about-img {
+  border-radius: 10px;
+  width: 100%;
+  height: auto; /* Maintain aspect ratio */
+  max-height: 500px; /* Adjust as needed */
+  object-fit: cover;
+}
+
+.info-section {
+  color:#e6c7eb;
+  margin-bottom: 2rem;
+}
+
+.section-title {
+  font-size: 1.75rem;
+  color: #ffffff;
+  margin-bottom: 1rem;
+}
+
+.section-text {
+  font-size: 1rem;
+  color: #ffffff;
+  font-family: 'Poppins', sans-serif;
+}
+
+.contact-section {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.contact-section a {
+  color: #e6c7eb;
+  text-decoration: none;
+}
+
+.contact-section a:hover {
+  text-decoration: underline;
+}
+
+.footer-container {
+  margin-top: 2rem;
+}
+
+@media (max-width: 1171px) {
   .abt-title {
-    font-size: 2.5rem;
-    color: #333;
-    margin-bottom: 0.5rem;
-  }
-  
-  .subtitle {
-    font-size: 1.25rem;
-    color: #838181;
-  }
-  
-  .grid-container {
-    padding: 6rem;
-    padding-top:0px;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1.5rem;
-  }
-  
-  .card {
-    flex: 1 1 calc(50% - 1.5rem);
-    background: #f9f9f9;
-    padding: 1.5rem;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  }
-  
-  .card-title {
-    font-size: 1.5rem;
-    color: #333;
-    margin-bottom: 1rem;
-  }
-  
-  .card-text {
-    font-size: 1rem;
-    color: #555;
-  }
-  
-  .info-section {
-    padding: 6rem;
-    padding-top: 0px;
-    margin: 2rem 0;
-  }
-  
-  .section-title {
-    font-size: 1.75rem;
-    color: #333;
-    margin-bottom: 1rem;
-  }
-  
-  .section-text {
-    font-size: 1.5rem;
-    color: #555;
-    margin-bottom: 1rem;
-  }
-  
-  .contact-section {
-    text-align: center;
-    margin-top: 2rem;
-  }
-  
-  .contact-section a {
-    color: #007bff;
-    text-decoration: none;
-  }
-  
-  .contact-section a:hover {
-    text-decoration: underline;
-  }
-  
-  .abt-images {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin: auto;
-    padding: 2rem;
-    max-width: 80%;
-    flex-wrap: wrap; 
-  }
-  
-  .about-img {
-    border-radius: 10px;
-    max-width: 100%; 
-    margin-bottom: 1rem; 
+    font-size: 2rem;
   }
 
-  .m{
-    margin:0px;
-    padding:0px;
-    width:100%;
+  .subtitle {
+    font-size: 1.1rem;
   }
-  
-  @media (max-width: 1171px) {
-    .abt-container {
-      padding: 1rem;
-    }
-  
-    .abt-title {
-      font-size: 2rem;
-    }
-  
-    .subtitle {
-      font-size: 1.1rem;
-    }
-  
-    .grid-container {
-      flex-direction: column; 
-    }
-  
-    .card {
-      flex: 1 1 100%;
-    }
-  
-    .abt-images {
-      flex-direction: column; 
-    }
-  
-    .section-title {
-      font-size: 1.5rem;
-    }
-  
-    .section-text {
-      font-size: 1.25rem;
-    }
+
+  .mission-image-section,
+  .values-image-section {
+    flex-direction: column;
   }
-  
-  @media (max-width: 480px) {
-    .abt-title {
-      font-size: 1.75rem;
-    }
-  
-    .subtitle {
-      font-size: 1rem;
-    }
-  
-    .card-title {
-      font-size: 1.25rem;
-    }
-  
-    .card-text {
-      font-size: 0.9rem;
-    }
-  
-    .section-title {
-      font-size: 1.25rem;
-    }
-  
-    .section-text {
-      font-size: 1rem;
-    }
+
+  .mission-card,
+  .values-card {
+    margin-right: 0;
+    margin-bottom: 1rem;
   }
-  
+
+  .about-img {
+    max-height: 300px; /* Adjust for smaller screens */
+  }
+
+  .info-section,
+  .contact-section {
+    padding: 1rem;
+  }
+
+  .section-title {
+    font-size: 1.5rem;
+  }
+
+  .section-text {
+    font-size: 0.9rem;
+  }
+}
+
+
+.info-section {
+  /* margin: 2rem auto; */
+  padding: 1rem; /* Optional for better visual separation */
+  border-radius: 10px;
+  max-width: 1450px; /* Ensures text doesn't stretch too wide */
+}
+
+.info-text-wrapper {
+  margin-bottom: 1.5rem;
+}
+
+.section-text {
+  font-size: 1rem;
+  color: white;/* Adjust as needed */
+  line-height: 1.6;
+  margin-bottom: 1rem;
+  text-align: justify; /* Ensures text lines up evenly on both sides */
+}
+
+.info-section-title {
+  font-size: 1.75rem;
+  font-weight: 600;
+  color: #000; /* Adjust as needed */
+  text-align: center;
+  margin-top: 1.5rem;
+}
+
+@media (max-width: 1171px) {
+  .section-text {
+    font-size: 0.9rem;
+  }
+
+  .info-section-title {
+    font-size: 1.5rem;
+  }
+}
+
+.card-text{
+font-size: 0.95rem;
+  color: #e6c7eb;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+  text-align: justify;
+}
+
+.section-text1{
+text-align: center;
+}

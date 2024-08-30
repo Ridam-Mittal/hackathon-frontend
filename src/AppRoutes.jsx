@@ -40,16 +40,14 @@ const AppRoutes = () => {
           />
         </div>
       ) : (
-        <>
-          <Routes>
-            <Route path="/" element={<Homepage />} />
-            <Route path="/aboutus" element={<About />} />
-            <Route path="/carbonmitra/calculation" element={<Calculator />} />
-            <Route path="/signup" element={<Signup />} />
-            <Route path="/login" element={<Login />} />
-            <Route path="/askai" element={<AI />} />
-          </Routes>
-        </>
+        <Routes>
+          <Route path="/" element={<Homepage />} />
+          <Route path="/aboutus" element={<About />} />
+          <Route path="/carbonmitra/calculation" element={<Calculator />} />
+          <Route path="/signup" element={<Signup />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/askai" element={<AI />} />
+        </Routes>
       )}
     </div>
   );

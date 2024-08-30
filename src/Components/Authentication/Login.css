@@ -26,7 +26,10 @@
   color: white;
   font-weight: 700px;
 }
-
+input{
+  background-color: white;
+  border:none;
+}
 .inputs {
   margin-top: 25px;
   display: flex;
@@ -37,14 +40,16 @@
 .k{
   background-color: black;
 }
-
+.forgot-password span{
+  color:#e6c7eb;
+}
 .input , .input1{
   display: flex;
   align-items: center;
   margin: auto;
   width: 404px;
   height: 59px;
-  background-color: #454343;
+  background-color: white;
   border-radius: 6px;
 }
 
@@ -52,15 +57,19 @@
   background-color: #e6c7eb;
 }
 
-.input input {
+.input input ,.input1 input{
   background: transparent;
   border: none;
   outline: none;
   height: 50px;
   width: 400px;
   font-size: 19px;
-  color: #ffffff;
+  color:black;
   padding: 1.2rem;
+}
+
+.input1 input{
+  color:black;
 }
 
 .forgot-password {
@@ -71,7 +80,7 @@
 }
 
 .forgot-password span {
-  color: #9b5eab;
+  color: #e6c7eb;
   cursor: pointer;
   font-weight: 500;
 }
@@ -88,8 +97,8 @@
   align-items: center;
   height: 59px;
   width: 229px;
-  color: #fff;
-  background-color: #9b5eab;
+  color: rgb(47, 47, 47);
+  background-color: #e6c7eb;
   border-radius: 50px;
   font-size: 19px;
   font-weight: 700;
@@ -104,13 +113,13 @@
 }
 
 .forgot-password1 span {
-  color: #9b5eab;
+  color: #e6c7eb;
   cursor: pointer;
   font-weight: 500;
 }
 
 .forgot-password1 a {
-  color: #9b5eab;
+  color: #e6c7eb;
   text-decoration: none;
 }
 

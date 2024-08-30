@@ -1,5 +1,6 @@
 import React, { useState, useRef } from 'react';
 import Footer from "../../Footer.jsx";
+import zIndex from '@mui/material/styles/zIndex.js';
 
 const ChatbotIntegration = () => {
     const [userInput, setUserInput] = useState('');
@@ -19,20 +20,19 @@ const ChatbotIntegration = () => {
             'circular economy', 'environmental policy', 'sustainable agriculture', 'water conservation', 'energy storage',
             'electric vehicles', 'carbon sequestration', 'industrial emissions', 'carbon budgeting', 'renewable resources'
         ];
-    
+
         const lowerCaseInput = input.toLowerCase();
-    
+
         // Check if the input is relevant to the specific topics
         const isTopicRelevant = keywords.some(keyword => 
             lowerCaseInput.includes(keyword) || 
             lowerCaseInput.split(' ').some(word => word.length > 3 && keyword.includes(word))
         );
-    
+
         // Allow general conversation if not directly relevant
         return isTopicRelevant || isGeneralConversation(input);
     };
-    
-    // Function to handle general conversation detection
+
     const isGeneralConversation = (input) => {
         // List of common conversational phrases
         const generalPhrases = [
@@ -43,29 +43,46 @@ const ChatbotIntegration = () => {
             'what is the weather', 'can you help me', 'how do you work', 'what can you do', 'are you a robot',
             'what is your purpose', 'can you chat with me', 'how do I use you', 'who created you'
         ];
-    
+
+        const restrictedPhrases = [
+            'who are you', 'what is your name', 'are you a robot', 'who created you', 
+            'what can you do', 'how do you work', 'can you chat with me', 
+            'how do I use you', 'what is chatgpt', 'what is openai', 'what is your purpose', 
+            'how do you generate responses', 'are you an AI', 'what is your job'
+        ];
+
         const lowerCaseInput = input.toLowerCase();
-        return generalPhrases.some(phrase => lowerCaseInput.includes(phrase));
+
+        // Return false if the input is related to the restricted topics
+        return generalPhrases.some(phrase => lowerCaseInput.includes(phrase)) && 
+               !restrictedPhrases.some(phrase => lowerCaseInput.includes(phrase));
     };
-    
 
     const handleSend = async () => {
         if (!userInput.trim()) return;
 
-        if (!isValidTopic(userInput)) {
-            setMessages(prevMessages => [
-                ...prevMessages,
-                { text: 'Please ask a more relevant question', type: 'bot' }
-            ]);
-            setUserInput('');
-            return;
-        }
-
         setMessages(prevMessages => [...prevMessages, { text: userInput, type: 'user' }]);
         conversationHistory.current.push({ role: 'user', content: userInput });
+
         setUserInput('');
         chatContainerRef.current.scrollTop = chatContainerRef.current.scrollHeight;
 
+        if (!isValidTopic(userInput)) {
+            setMessages(prevMessages => [
+                ...prevMessages,
+                { text: 'As a chatbot for CarbonMitra, I don’t have information on that topic.', type: 'bot' }
+            ]);
+            return;
+        }
+
+        // if (!(userInput)) {
+        //     // Provide a custom response for questions about the chatbot itself
+        //     setMessages(prevMessages => [
+        //         ...prevMessages,
+        //         { text: 'As a chatbot for CarbonMitra, I don’t have information on that topic.', type: 'bot' }
+        //     ]);
+        //     return;
+        // }
 
         const apiKey = import.meta.env.VITE_OPENAI_API_KEY;
 
@@ -133,67 +150,90 @@ const ChatbotIntegration = () => {
     };
 
     return (
-        <div className="m">
-            <div style={styles.pageContainer}>
-                <div style={styles.chatContainer}>
-                    <div style={styles.messages} ref={chatContainerRef}>
-                        {messages.map((message, index) => (
-                            <div key={index} style={{ ...styles.message, ...(message.type === 'user' ? styles.userMessage : styles.botMessage) }}>
-                                {message.text}
-                            </div>
-                        ))}
+        <div style={{margin:0}}>
+    <div style={styles.pageContainer}>
+        <div style={styles.chatContainer}>
+            <div style={styles.messages} ref={chatContainerRef}>
+                <div style={styles.watermark}>CarbonAI</div>   
+                {messages.map((message, index) => (
+                    <div key={index} style={{ ...styles.message, ...(message.type === 'user' ? styles.userMessage : styles.botMessage) }}>
+                        {message.text}
                     </div>
-                    <div style={styles.chatInputContainer}>
-                        <input
-                            type="text"
-                            style={styles.chatInput}
-                            value={userInput}
-                            onChange={(e) => setUserInput(e.target.value)}
-                            placeholder="Type a message..."
-                        />
-                        <button style={styles.sendBtn} onClick={handleSend}>Send</button>
-                    </div>
-                </div>
+                ))}
             </div>
-            <Footer />
+            <div style={styles.chatInputContainer}>
+                <input
+                    type="text"
+                    style={styles.chatInput}
+                    value={userInput}
+                    onChange={(e) => setUserInput(e.target.value)}
+                    placeholder="Type a message..."
+                    onKeyPress={(e) => {
+                        if (e.key === 'Enter') {
+                            handleSend();
+                        }
+                    }}
+                />
+                <button style={styles.sendBtn} onClick={handleSend}>Send</button>
+            </div>
         </div>
+    </div>
+</div>
+
     );
 };
-
 const styles = {
     pageContainer: {
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
         height: '100vh',
-        backgroundColor: '#2c2c2c', // Coal-themed background color
-        color: '#fff',
+        backgroundColor: '#000000', // Pure black background
+        color: '#ffffff', // White text color
         fontFamily: 'Arial, sans-serif',
-        padding: '20px', // Add padding for spacing
-        boxSizing: 'border-box', // Ensure padding is included in height/width
+        padding: '0px 20px',
+        boxSizing: 'border-box',
     },
     chatContainer: {
-        width: '100%', // Use full width
-        height: '100%', // Use full height
-        maxWidth: '1400px', // Set a maximum width
-        maxHeight: '650px', // Set a maximum height
+        position: 'relative',
+        width: '100%',
+        height: '90%',
+        maxWidth: '1400px',
+        maxHeight: '650px',
         border: '1px solid #444',
         borderRadius: '10px',
         padding: '15px',
-        backgroundColor: '#1e1e1e', // Dark background for the chat container
+        backgroundColor: 'black',
         boxShadow: '0 4px 20px rgba(0, 0, 0, 0.5)',
         display: 'flex',
         flexDirection: 'column',
         justifyContent: 'space-between',
+        overflow: 'hidden',
+    },
+    watermark: {
+        position: 'absolute',
+        top: '10px', // Position at the top
+        left: '10%',
+        transform: 'translateX(-50%)', // Center horizontally
+        fontSize: '40px',
+        color: 'white', // Red color for the text
+        fontWeight: 'bold',
+        fontFamily: '"Courier New", Courier, monospace', // Watermark-like font
+        opacity: 1, // Slight transparency to give a watermark effect
+        zIndex: 1, // Ensure it's above other elements
+        pointerEvents: 'none', // Make sure it doesn't interfere with other elements
     },
     messages: {
         flex: 1,
         overflowY: 'auto',
         padding: '10px',
         borderRadius: '5px',
-        backgroundColor: '#333', // Slightly lighter background for messages
+        backgroundColor: 'black', // White background for messages
+        color: 'black', // Black text for messages
         boxShadow: 'inset 0 0 10px rgba(0, 0, 0, 0.3)',
         marginBottom: '10px',
+        position: 'relative', // To ensure z-index stacking
+        zIndex: 3, // Make sure messages are above the watermark
     },
     message: {
         marginBottom: '10px',
@@ -201,16 +241,22 @@ const styles = {
         borderRadius: '5px',
         lineHeight: '1.5',
         fontSize: '14px',
+        color: 'black',
+        zIndex: 3, // Black text color for messages
     },
     userMessage: {
-        backgroundColor: '#007bff', // User message color
+        backgroundColor: 'white', // Black background for user messages
         textAlign: 'right',
         alignSelf: 'flex-end',
+        color: 'black',
+        zIndex:3,
     },
     botMessage: {
-        backgroundColor: '#444', // Bot message color
+        backgroundColor: '#e6c7eb', // Green background for bot messages
         textAlign: 'left',
         alignSelf: 'flex-start',
+        color:'black',
+        zIndex:3,
     },
     chatInputContainer: {
         display: 'flex',
@@ -224,25 +270,27 @@ const styles = {
         borderRadius: '5px',
         marginRight: '10px',
         fontSize: '14px',
-        backgroundColor: '#555', // Input field background
-        color: '#fff',
+        backgroundColor: 'white', // White background for input field
+        color: 'black', // Black text color for input
     },
     sendBtn: {
         padding: '10px 15px',
         border: 'none',
         borderRadius: '5px',
-        backgroundColor: '#007bff',
-        color: '#fff',
+        backgroundColor: '#6200EA', // Purple background for the send button
+        color: '#ffffff', // White text color for the send button
         cursor: 'pointer',
         fontSize: '14px',
         transition: 'background-color 0.3s',
+        zIndex: 1, // Make sure the button is above the watermark
     },
 };
 
 // Add hover effect for the send button
 const sendBtnHover = {
     ...styles.sendBtn,
-    backgroundColor: '#0056b3',
+    backgroundColor: '#3700B3', // Darker purple for hover effect
 };
+
 
 export default ChatbotIntegration;
