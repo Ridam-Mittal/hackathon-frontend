@@ -12,7 +12,6 @@ import Signup from "./Components/Authentication/Signup.jsx";
 import Login from "./Components/Authentication/Login.jsx";
 import About from "./Components/About/About.jsx";
 import AI from "./Components/AI/AskAI.jsx";
-import Trying from "./Trying.jsx";
 
 const AppRoutes = () => {
   const [loading, setLoading] = useState(false);
@@ -44,7 +43,6 @@ const AppRoutes = () => {
         <Routes>
           <Route path="/" element={<Homepage />} />
           <Route path="/aboutus" element={<About />} />
-          <Route path="/trying" element={<Trying />} />
           <Route path="/carbonmitra/calculation" element={<Calculator />} />
           <Route path="/signup" element={<Signup />} />
           <Route path="/login" element={<Login />} />
