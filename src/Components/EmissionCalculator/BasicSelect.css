@@ -1,3 +1,4 @@
+/* Footer Container */
 .footer-container {
   width: 100%;
   bottom: 0;
@@ -5,44 +6,47 @@
   margin: 0;
   padding: 0;
 }
-h1.l1{
- margin-left: 30px;
- margin-top:20px;
- color:black;
+
+/* Header Style */
+h1.l1 {
+  margin-left: 30px;
+  margin-top: 20px;
+  color: #333; /* Darker shade for better readability */
 }
+
 /* BasicSelect.css */
 
+/* TextField and Input styling */
 .MuiTextField-root {
-  background-color: #e6c7eb;
-  border-radius: 20px;
+  background-color: #f0f4f8; /* Light grey for a clean look */
+  border-radius: 10px; /* Slightly rounded corners for a modern look */
 }
 
 .MuiInputBase-root {
-  background-color: #e6c7eb; /* For input base */
-  border-radius: 20px;
+  background-color: #f0f4f8; /* Consistent background color */
+  border-radius: 10px;
 }
 
 .MuiOutlinedInput-root .MuiOutlinedInput-notchedOutline {
-  border-color: #e6c7eb; /* For outline border */
+  border-color: #c1c8e4; /* Soft blue outline for subtle emphasis */
 }
 
 .MuiInputLabel-root {
-  color: #5c4a77; /* Optional: Change label color for better contrast */
+  color: #5c6bc0; /* Softer, complementary color for better contrast */
 }
 
 .MuiInputLabel-root.Mui-focused {
-  color: #5c4a77; /* Optional: Change focused label color */
+  color: #3f51b5; /* Darker shade when focused for clarity */
 }
 
 .MuiInputBase-input {
-  color: #000; /* Optional: Change input text color */
+  color: #333; /* Dark color for text for better readability */
 }
 
-@media screen and (max-width:609px) {
+/* Responsive Design for Small Screens */
+@media screen and (max-width: 609px) {
   .graph-btns {
-      /* display: flex; */
-      /* flex-direction: column; */
-      align-items: center;
-      gap: 1.5rem;
+    align-items: center;
+    gap: 1.5rem;
   }
 }

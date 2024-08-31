@@ -5,6 +5,8 @@ import Footer from "./Footer.jsx";
 import { BrowserRouter } from "react-router-dom";
 import AppRoutes from "./AppRoutes.jsx";
 import ClipLoader from "react-spinners/ClipLoader";
+import './index.css';
+
 
 function App() {
   const [loading, setLoading] = useState(false);
