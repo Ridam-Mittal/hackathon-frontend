@@ -5,44 +5,44 @@ const Whatwedo = () => {
   return (
     <div>
       <section class="objectives">
-        <h2>What we do</h2>
-        <p>Our work is divided into 4 core objectives</p>
+        <h2>CORE OBJECTIVES</h2>
+        {/* <p>Our work is divided into 4 main core objectives</p> */}
         <div class="objectives-container">
           <div class="objective-card">
             <img
-              src="/wedo_1.png"
+              src="/cal.png"
               alt="Tree Reforestation"
               className="what-we-do-images"
             />
-            <h3>Carbon emission calculation</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipiscing elit...</p>
+            <h3>Carbon emission calculator</h3>
+            <p>Precision Tools for Your Path to Carbon Neutrality</p>
           </div>
           <div class="objective-card">
             <img
-              src="/wedo_2.png"
+              src="/hab.png"
               alt="Habitat Protection"
               className="what-we-do-images"
             />
             <h3>Habitat Protection</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipiscing elit...</p>
+            <p>Preserving Nature’s Balance for Future Generations</p>
           </div>
           <div class="objective-card">
             <img
-              src="/wedo_3.png"
+              src="/aff.png"
               alt="River & Lake Cleaning"
               className="what-we-do-images"
             />
             <h3>Afforestation</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipiscing elit...</p>
+            <p>Restoring Ecosystems, One Tree at a Time</p>
           </div>
           <div class="objective-card">
             <img
-              src="/wedo_4.png"
+              src="/mine.png"
               alt="Community Help"
               className="what-we-do-images"
             />
             <h3>Helping coal mines</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipiscing elit...</p>
+            <p>Leading the Charge for Responsible Mining Innovations</p>
           </div>
         </div>
       </section>

@@ -10,6 +10,14 @@
   border-radius: 10px;
 }
 
+.input input::placeholder {
+  color: #e6c7eb;
+}
+
+.input1 input::placeholder {
+  color: #000000;
+}
+
 .header {
   display: flex;
   flex-direction: column;
@@ -21,29 +29,35 @@
 
 .auth-text {
   font-family: fahkwang;
-  font-weight:bold;
+  font-weight: bold;
   font-size: 56px;
   color: white;
   font-weight: 700px;
 }
-input{
+
+input {
   background-color: white;
-  border:none;
+  border: none;
 }
+
 .inputs {
   margin-top: 25px;
   display: flex;
   flex-direction: column;
   gap: 25px;
+  border: none;
 }
 
-.k{
+.k {
   background-color: black;
 }
-.forgot-password span{
-  color:#e6c7eb;
+
+.forgot-password span {
+  color: #e6c7eb;
 }
-.input , .input1{
+
+.input,
+.input1 {
   display: flex;
   align-items: center;
   margin: auto;
@@ -53,30 +67,44 @@ input{
   border-radius: 6px;
 }
 
-.input1{
+.input1 {
   background-color: #e6c7eb;
+  margin-bottom: 30px;
+  margin-top: 12px;
 }
 
-.input input ,.input1 input{
+.input input,
+.input1 input {
   background: transparent;
   border: none;
   outline: none;
   height: 50px;
   width: 400px;
   font-size: 19px;
-  color:black;
+  color: black;
   padding: 1.2rem;
+  box-sizing: content-box;
 }
 
-.input1 input{
-  color:black;
+.input input {
+  border: 1px solid #e6c7eb;
+  border-color: #e6c7eb;
+  background-color: black;
+  color: #e6c7eb;
+}
+
+.input1 input {
+  color: black;
+  border: 1px solid #e6c7eb;
+  background-color: #e6c7eb;
 }
 
 .forgot-password {
-  padding-left: 62px;
+  padding-left: 98px;
   margin-top: 27px;
   color: #ffffff;
   font-size: 18px;
+  font-family: fahkwang;
 }
 
 .forgot-password span {
@@ -96,20 +124,25 @@ input{
   justify-content: center;
   align-items: center;
   height: 59px;
-  width: 229px;
+  width: 200px;
   color: rgb(47, 47, 47);
   background-color: #e6c7eb;
-  border-radius: 50px;
+  /* border-radius: 50px; */
   font-size: 19px;
   font-weight: 700;
   cursor: pointer;
 }
 
 .forgot-password1 {
-  padding-left: 62px;
-  margin-top: 27px;
+  padding-left: 98px;
+  margin-top: 7px;
   color: #ffffff;
   font-size: 18px;
+  font-family: fahkwang;
+  font-weight: bold;
+  font-size: 20px;
+  text-decoration: underline;
+  text-decoration-color: #64cebb;
 }
 
 .forgot-password1 span {
@@ -119,7 +152,7 @@ input{
 }
 
 .forgot-password1 a {
-  color: #e6c7eb;
+  color: #64cebb;
   text-decoration: none;
 }
 

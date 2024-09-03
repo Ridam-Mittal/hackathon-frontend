@@ -29,7 +29,7 @@ function App() {
     <>
       {loading ? (
         <div className="loader-wrapper">
-          <ClipLoader color={"#A5DD9B"} loading={loading} size={90} />
+          <ClipLoader color={"#e6c7eb"} loading={loading} size={90} />
         </div>
       ) : (
         <BrowserRouter>

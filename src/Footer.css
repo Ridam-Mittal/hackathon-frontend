@@ -45,7 +45,7 @@ body,
   margin-right: 1rem;
 } */
 
-.footer {
+/* .footer {
   bottom: 0;
   background-color: #393b39;
   color: white;
@@ -93,4 +93,93 @@ body {
 .icons a {
   font-size: x-large;
   margin-right: 1rem;
+} */
+
+.footer {
+  background-color: black; /* Solid black background */
+  color: white; /* Text color */
+  width: 100%;
+  display: flex; /* Flexbox layout */
+  justify-content: space-between; /* Equal spacing between sections */
+  align-items: center; /* Center items vertically */
+  padding: 2rem 0; /* Padding for top and bottom */
+  border-top: 3px solid white; /* Ensure no borders */
+}
+
+
+.middle3,
+.right3 {
+  flex: 1; /* Each section takes equal width */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 1rem; /* Optional padding for inner spacing */
+}
+
+.left3{
+  flex: 1; /* Each section takes equal width */
+  display: flex;
+  padding-top: 0;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 1rem;
+  
+}
+
+.footer .left3 .website-name {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem; /* Space below the website name */
+  text-align: left;
+  /* margin-left: 0rem; */
+  justify-content: left;
+  align-items: left;
+}
+
+.rights {
+  font-size: 0.9rem;
+}
+
+.middle3 h3 {
+  margin: 0.5rem 0; /* Space above and below the heading */
+}
+
+.sitemap-links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sitemap-links a {
+  margin: 0.2rem 0;
+  color: white;
+  text-decoration: none;
+}
+
+.sitemap-links a:hover {
+  text-decoration: underline;
+}
+
+.contact-info {
+  text-align: center;
+  font-size: 17.5px;
+}
+
+.contact-info p a{
+  color:#e6c7eb;
+}
+
+.social-media {
+  display: flex;
+  margin-top: 1rem;
+}
+
+.social-media a {
+  font-size: x-large;
+  margin: 0 1rem;
+  color: white;
+}
+
+.social-media a:hover {
+  color: #ccc; /* Change color on hover */
 }

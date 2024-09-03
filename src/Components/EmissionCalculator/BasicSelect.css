@@ -1,52 +1,45 @@
-/* Footer Container */
-.footer-container {
+
+
+body {
+  background-color: #f0f0f0;
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  background-color: #ffffff; 
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+input, select, textarea {
+  background-color: #ffffff; 
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 8px;
+  box-sizing: border-box;
   width: 100%;
-  bottom: 0;
-  left: 0;
-  margin: 0;
-  padding: 0;
 }
 
-/* Header Style */
-h1.l1 {
-  margin-left: 30px;
-  margin-top: 20px;
-  color: #333; /* Darker shade for better readability */
+input:focus, select:focus, textarea:focus {
+  border-color: #007bff;
+  outline: none;
 }
 
-/* BasicSelect.css */
-
-/* TextField and Input styling */
-.MuiTextField-root {
-  background-color: #f0f4f8; /* Light grey for a clean look */
-  border-radius: 10px; /* Slightly rounded corners for a modern look */
+button {
+  background-color: #007bff; 
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 20px;
+  cursor: pointer;
 }
 
-.MuiInputBase-root {
-  background-color: #f0f4f8; /* Consistent background color */
-  border-radius: 10px;
+button:hover {
+  background-color: #0056b3; 
 }
 
-.MuiOutlinedInput-root .MuiOutlinedInput-notchedOutline {
-  border-color: #c1c8e4; /* Soft blue outline for subtle emphasis */
+.dialog-content pre {
+  white-space: pre-wrap; 
 }
 
-.MuiInputLabel-root {
-  color: #5c6bc0; /* Softer, complementary color for better contrast */
-}
-
-.MuiInputLabel-root.Mui-focused {
-  color: #3f51b5; /* Darker shade when focused for clarity */
-}
-
-.MuiInputBase-input {
-  color: #333; /* Dark color for text for better readability */
-}
-
-/* Responsive Design for Small Screens */
-@media screen and (max-width: 609px) {
-  .graph-btns {
-    align-items: center;
-    gap: 1.5rem;
-  }
-}

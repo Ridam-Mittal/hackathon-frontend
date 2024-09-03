@@ -154,7 +154,7 @@
 .info-section-title {
   font-size: 1.75rem;
   font-weight: 600;
-  color: #000; /* Adjust as needed */
+  color: white; /* Adjust as needed */
   text-align: center;
   margin-top: 1.5rem;
 }
@@ -179,4 +179,12 @@ font-size: 0.95rem;
 
 .section-text1{
 text-align: center;
+}
+
+.card-title{
+  color:white;
+}
+
+.abt-title{
+  color:white;
 }

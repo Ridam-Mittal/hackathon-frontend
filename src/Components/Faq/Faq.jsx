@@ -57,10 +57,10 @@ export default function CustomizedAccordions() {
   return (
     <div>
       <div className="faq-heading">
-        <h2
-          style={{ textAlign: "center", fontSize: "2.5rem", color: "" }}
+        <h2 
+          style={{ textAlign: "center", fontSize: "2.5rem", color: "",fontFamily:"Fahkwang" }}
         >
-          FAQ's
+          CUSTOMER QUERIES
         </h2>
       </div>
       <div
@@ -83,17 +83,13 @@ export default function CustomizedAccordions() {
               id="panel1d-header"
               style={{ height: "5rem" }}
             >
-              <Typography style={{ fontSize: "1.5rem" }} className="faq-que">
-                What is a carbon calculator?{" "}
+              <Typography style={{ fontSize: "1.5rem",fontFamily:"Helvetica" ,fontWeight:"Bold"}} className="faq-que">
+              What is CARBONMITRA, and how can it help my coal mining operation?{" "}
               </Typography>
             </AccordionSummary>
             <AccordionDetails>
-              <Typography style={{ fontSize: "1.2rem", opacity: 0.8 }}>
-                A carbon calculator is a tool designed to estimate the amount of
-                carbon dioxide (CO2) emissions produced by an individual,
-                organization, or activity. It helps users understand their
-                carbon footprint, which is a measure of the total greenhouse
-                gases they are responsible for emitting, directly or indirectly.
+              <Typography style={{ fontSize: "1.2rem", opacity: 0.8, fontFamily:"Helvetica",  }}>
+              CARBONMITRA is a web application designed to assist coal mining operations in reducing carbon emissions. It allows users to input key data such as net emissions, location, and production quantity, and provides tailored strategies for achieving carbon neutrality, along with cost estimates.
               </Typography>
             </AccordionDetails>
           </Accordion>
@@ -117,17 +113,15 @@ export default function CustomizedAccordions() {
             <AccordionSummary
               aria-controls="panel2d-content"
               id="panel2d-header"
-              style={{ height: "5rem" }}
+              style={{ height: "5rem",backgroundColor:"#e6c7eb" }}
             >
-              <Typography style={{ fontSize: "1.5rem" }} className="faq-que">
-                Is my data secure with CARBONMITRA?{" "}
+              <Typography style={{ fontSize: "1.5rem" ,fontWeight:"Bold"}} className="faq-que">
+              How does CARBONMITRA calculate carbon reduction strategies?{" "}
               </Typography>
             </AccordionSummary>
             <AccordionDetails>
               <Typography style={{ fontSize: "1.2rem", opacity: 0.8 }}>
-                Yes, we prioritize the privacy and security of your data. All
-                information entered into the app is kept confidential and is not
-                shared with third parties without your consent.
+              CARBONMITRA integrates advanced algorithms and AI-driven analysis to evaluate your mining data. It considers various factors like current emission levels, industry best practices, and available carbon offset methods to suggest actionable strategies for reducing your carbon footprint.
               </Typography>
             </AccordionDetails>
           </Accordion>
@@ -153,26 +147,22 @@ export default function CustomizedAccordions() {
               id="panel3d-header"
               style={{ height: "5rem" }}
             >
-              <Typography style={{ fontSize: "1.5rem" }} className="faq-que">
-                How can I learn more about reducing my emissions?{" "}
+              <Typography style={{ fontSize: "1.5rem",fontWeight:"Bold" }} className="faq-que">
+              Is my data secure with CARBONMITRA?{" "}
               </Typography>
             </AccordionSummary>
             <AccordionDetails>
               <Typography style={{ fontSize: "1.2rem", opacity: 0.8 }}>
-                Our platform provides personalized insights and actionable
-                recommendations to help you reduce your carbon footprint.
-                Additionally, you can explore our blog and resources section for
-                tips and strategies on sustainable practices.All this features
-                are coming soon on CARBONMITRA.
+              Yes, CARBONMITRA prioritizes data security and privacy. We implement robust encryption and follow industry standards to ensure that all user data is protected against unauthorized access and breaches.
               </Typography>
             </AccordionDetails>
           </Accordion>
         </div>
       </div>
       <div className="showcasing-join" style={{ marginTop: "6rem" }}>
-        <h2 className="having-que">Having More Queries?</h2>
+        <h2 className="having-que">For More Queries</h2>
         <div className="join-content">
-        <h2>Contact Us at <a href="mailto:contactus@carbonmitra.com">contactus@carbonmitra.com</a></h2>
+        <h2><a href="mailto:contactus@carbonmitra.com">contactus@carbonmitra.com</a></h2>
           <lord-icon
             src="https://cdn.lordicon.com/whtfgdfm.json"
             trigger="hover"

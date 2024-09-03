@@ -2,8 +2,9 @@
 .homepage-container {
   background-color: black;
   color: white;
-  padding: 0 20px;
-  overflow-x: hidden; /* Prevent horizontal overflow */
+  /* padding: 0 20px; */
+  overflow-x: hidden;
+  /* Prevent horizontal overflow */
   box-sizing: border-box;
 }
 
@@ -19,7 +20,8 @@
 .centered-image img {
   max-width: 100%;
   height: auto;
-  border-radius: 10px; /* Optional for rounded corners */
+  border-radius: 10px;
+  /* Optional for rounded corners */
 }
 
 /* Spacer for consistent spacing between components */
@@ -46,35 +48,332 @@ h1 {
 }
 
 /* Container Styling */
-.container1, .container2 {
+.container1,
+.container2 {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   margin: 0 auto;
+  height: 100vh;
   width: 100%;
-  max-width: 1480px; /* Set a max-width to prevent overflow */
-  border-radius: 10px;
+  max-width: 1480px;
+  /* Set a max-width to prevent overflow */
 }
 
-.left1, .middle1, .right1,
-.left2, .middle2, .right2 {
-  flex: 1; /* Distribute evenly */
+.left1,
+.middle1,
+.right1,
+.left2,
+.middle2,
+.right2 {
+  flex: 1;
+  /* Distribute evenly */
   background-color: black;
   color: white;
   padding: 20px;
-  border: 2px solid white;
+  /* border: 2px solid white; */
   box-sizing: border-box;
 }
 
-.left1, .left2 {
+.left1 {
+  flex: 2;
+}
+
+.left1,
+.left2 {
   border-top-left-radius: 20px;
   border-bottom-left-radius: 20px;
 }
 
-.right1, .right2 {
+.right1,
+.right2 {
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
 }
+
+.text h1 {
+  font-weight: 400;
+  color: white;
+}
+
+.typing-text {
+  font-family: 'Poppins', sans-serif;
+  display: inline-block;
+  /* border-right: 2px solid #333;  */
+  white-space: nowrap;
+  overflow: hidden;
+  /* animation: typing 2.5s steps(20) infinite, cursor 1s step-end infinite; */
+  font-size: 2.3rem;
+  font-weight: 600;
+  color: #bbbaba;
+  /* Changed to a lighter coal color */
+}
+
+
+
+/* Typing effect */
+@keyframes typing {
+  from {
+    width: 0;
+  }
+
+  to {
+    width: 23ch;
+  }
+}
+
+/* Blinking cursor effect */
+@keyframes cursor {
+
+  from,
+  to {
+    border-color: transparent;
+  }
+
+  50% {
+    border-color: #333;
+  }
+}
+
+.getting-started {
+  text-align: center;
+  margin-top: 2.5rem;
+}
+
+.start-btn {
+  width: 8.5rem;
+  height: 3rem;
+  border-radius: 5px;
+  font-size: large;
+  font-weight: 500;
+  border: none;
+  background-color: #444;
+  /* Dark coal color */
+  color: #FFFFFF;
+  /* White text for contrast */
+  transition: box-shadow 0.2s ease;
+  cursor: pointer;
+}
+
+.about-btn {
+  width: 7rem;
+  height: 3rem;
+  border-radius: 5px;
+  font-size: large;
+  font-weight: 500;
+  border: none;
+  background-color: #555;
+  /* Slightly lighter coal color */
+  color: #FFFFFF;
+  /* White text for contrast */
+  transition: box-shadow 0.2s ease;
+  cursor: pointer;
+}
+
+.start-btn:hover {
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.5);
+  /* Darker shadow */
+}
+
+.about-btn:hover {
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.5);
+  /* Darker shadow */
+}
+
+.container,
+.container1,
+.container2 {
+  display: flex;
+  height: 80vh;
+  width: 100%;
+  margin: 0px;
+  width: 1480px;
+  margin-left: 20px;
+  margin-right: 20px;
+  border-bottom: 1px solid white;
+}
+
+.left,
+.left1 {
+  flex: 2;
+  /* 2 parts */
+  background-color: black;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: top;
+  /* padding-left: 0px; */
+  padding: 20px;
+  /* border: 2px solid white; */
+  /* Right border */
+  /* border-radius:10px; */
+  /* box-sizing: border-box; */
+  /* margin: 100px; */
+  /* margin-left: 0%; */
+}
+
+.left2 {
+  flex: 1;
+  /* 2 parts */
+  background-color: black;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-right: 1px solid white;
+  /* padding-left: 0px; */
+  padding: 20px;
+
+
+  /* border-radius:10px; */
+  /* border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  border: 2px solid white; */
+  /* Right border */
+
+}
+
+.left4 {
+  padding-top: 50px;
+  padding-left: 30px;
+  font-size: 3em;
+  padding-bottom: 20px;
+}
+
+.left4 span {
+  font-family: fahkwang;
+  font-size: 60px;
+  font-weight: bold;
+  display: block;
+  /* Makes each span take a full line */
+  /* margin-bottom: 9px; */
+  /* Adjust the value as needed for spacing */
+
+}
+
+.left5 {
+  /* padding-top: 50px; */
+  padding-left: 30px;
+  font-size: 2.2em;
+  padding-bottom: 70px;
+  color: #e6c7eb;
+  font-family: fahkwang;
+}
+
+.left5 span {
+  font-family: 'Roboto', sans-serif;
+  display: block;
+  /* Makes each span take a full line */
+  margin-bottom: 9px;
+  /* Adjust the value as needed for spacing */
+
+}
+
+.left6 {
+  padding-top: 50px;
+  padding-left: 30px;
+  font-size: 2em;
+  font-family: fahkwang;
+  padding-bottom: 100px;
+  color: #fcfcfc;
+}
+
+.container1 .left1 .left6 span {
+  color: #C6EB85;
+  display: inline;
+}
+
+.left6 span {
+  font-family: fahkwang;
+  display: block;
+  /* Makes each span take a full line */
+  margin-bottom: 9px;
+  /* Adjust the value as needed for spacing */
+
+}
+
+.middle2 {
+  flex: 1;
+  /* 2 parts */
+  background-color: black;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* padding-left: 0px; */
+  padding: 20px;
+  border-right:1px solid white;
+  /* border: 2px solid white; */
+  /* Right border */
+
+}
+
+.right2 {
+  flex: 1;
+  /* 2 parts */
+  background-color: black;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* padding-left: 0px; */
+  padding: 20px;
+  /* border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  /* border-radius:10px; */
+  /* border: 2px solid white;  */
+  /* Right border */
+
+}
+
+.middle,
+.middle1 {
+  flex: 1;
+  /* 1 part */
+  background-color: black;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px;
+  border: 2px solid white;
+  /* Right border */
+}
+
+.right,
+.right1 {
+  flex: 1;
+  /* 1 part */
+  /* background: url('https://d41chssnpqdne.cloudfront.net/user_upload_by_module/chat_bot/files/9983168/rDkzeGNCXIupkKPW.png?Expires=1726058203&Signature=u9vvo-i-sCJw4a6y41TmJP9ebmcdwUGXnV9A~fxhz2MRur-p2RPg99NkazTJLGnv0r9fgFLk4vzIljefyTcDA8FsmIYR7iIxONfQwjL9CqlPRvLK0UutsjsVBlyTJkN2Jxqg8RKTj2ZPwHuxehcqv-6paExK7bdtf3VdJNW-syZrUq2Hdn0~rCCTf-og-dxZgYn5YZB2-xk-2gmRgFmpqkRiI604u95vp3UHBl~gzl4KiXHi6c0fjJ68XtVPlE8x~wQTIWuOWJrOEGDaTU4sybUserkYMryvsJjdukgmp8fq5YPSnOKPNX-Ue5arLc6Pquz8HoucnwOHA8UpaCyNbg__&Key-Pair-Id=K3USGZIKWMDCSXwrie) no-repeat center center; */
+  background-size: cover;
+  background-color: black;
+  color: white;
+  display: flex;
+  /* flex-direction: column; */
+  justify-content: center;
+  padding: 20px;
+  /* border-radius:10px; */
+  border: 2px solid white;
+}
+
+
+
+
+.k {
+  background-color: black;
+}
+
+h1 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 30px;
+  margin: 0;
+}
+
+h2 {
+  font-size: 24px;
+  margin: 10px 0;
+}
+
 
 /* Responsive Design */
 @media screen and (max-width: 1100px) {
@@ -100,3 +399,73 @@ h1 {
     font-size: 1.4rem;
   }
 }
+
+.left1 {
+  border: none;
+
+}
+
+.explore-button {
+  width: 294px;
+  height: 51px;
+  background-color: #e6c7eb;
+  margin-left: 30px;
+  border: none;
+  font-size: 18px;
+  font-weight: bold;
+  color:black;
+}
+
+.explore-button:hover {
+  width: 294px;
+  height: 51px;
+  background-color: #c292c9;
+  margin-left: 30px;
+  border: none;
+  font-size: 18px;
+  font-weight: bold;
+  color:black;
+}
+
+.left7{
+  padding-top: 30px;
+  padding-bottom: 30px;
+  /* margin-left:30px; */
+  font-family: fahkwang;
+  font-size:50px;
+  font-weight: bold;
+  border-bottom: 1px solid white;
+}
+
+.left8{
+  margin-left: 30px;
+}
+
+.left9{
+  font-family: fahkwang;
+  font-size: 33px;
+  margin-top:30px;
+  margin-left: 10px;
+  margin-right: 30px;
+  font-weight: bold;
+}
+
+.left10{
+  color:#e6c7eb;
+  margin-left: 10px;
+  font-family: Helvetica;
+  font-size: 20px;
+}
+.left11{
+  font-family: fahkwang;
+  font-size: 31px;
+  margin-top:40px;
+  margin-left: 10px;
+  margin-right: 30px;
+  font-weight: bold;
+
+}
+/* 
+.container2{
+  width: 97%;
+} */
